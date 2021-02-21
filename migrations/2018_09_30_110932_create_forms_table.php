@@ -24,6 +24,7 @@ class CreateFormsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->string('name');
+            $table->string('icon');
             $table->string('visibility');
             $table->boolean('allows_edit')->default(false);
 
