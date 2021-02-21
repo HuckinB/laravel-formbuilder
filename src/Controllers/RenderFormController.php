@@ -5,11 +5,11 @@ Licensed under the GNU General Public License v3.0
 Author: Jasmine Robinson (jazmy.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder\Controllers;
+namespace huckinb\FormBuilder\Controllers;
 
 use App\Http\Controllers\Controller;
-use jazmy\FormBuilder\Helper;
-use jazmy\FormBuilder\Models\Form;
+use huckinb\FormBuilder\Helper;
+use huckinb\FormBuilder\Models\Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Throwable;

@@ -5,10 +5,10 @@ Licensed under the GNU General Public License v3.0
 Author: Jasmine Robinson (jazmy.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder\Middlewares;
+namespace huckinb\FormBuilder\Middlewares;
 
 use Closure;
-use jazmy\FormBuilder\Models\Submission;
+use huckinb\FormBuilder\Models\Submission;
 
 class FormAllowSubmissionEdit
 {

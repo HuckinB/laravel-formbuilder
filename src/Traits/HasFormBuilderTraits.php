@@ -5,10 +5,10 @@ Licensed under the GNU General Public License v3.0
 Author: Jasmine Robinson (jazmy.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder\Traits;
+namespace huckinb\FormBuilder\Traits;
 
-use jazmy\FormBuilder\Models\Form;
-use jazmy\FormBuilder\Models\Submission;
+use huckinb\FormBuilder\Models\Form;
+use huckinb\FormBuilder\Models\Submission;
 
 trait HasFormBuilderTraits
 {

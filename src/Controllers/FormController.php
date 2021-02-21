@@ -5,15 +5,15 @@ Licensed under the GNU General Public License v3.0
 Author: Jasmine Robinson (jazmy.com)
 Last Updated: 12/29/2018
 ----------------------*/
-namespace jazmy\FormBuilder\Controllers;
+namespace huckinb\FormBuilder\Controllers;
 
 use App\Http\Controllers\Controller;
-use jazmy\FormBuilder\Events\Form\FormCreated;
-use jazmy\FormBuilder\Events\Form\FormDeleted;
-use jazmy\FormBuilder\Events\Form\FormUpdated;
-use jazmy\FormBuilder\Helper;
-use jazmy\FormBuilder\Models\Form;
-use jazmy\FormBuilder\Requests\SaveFormRequest;
+use huckinb\FormBuilder\Events\Form\FormCreated;
+use huckinb\FormBuilder\Events\Form\FormDeleted;
+use huckinb\FormBuilder\Events\Form\FormUpdated;
+use huckinb\FormBuilder\Helper;
+use huckinb\FormBuilder\Models\Form;
+use huckinb\FormBuilder\Requests\SaveFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Throwable;
@@ -64,7 +64,7 @@ class FormController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  jazmy\FormBuilder\Requests\SaveFormRequest $request
+     * @param  huckinb\FormBuilder\Requests\SaveFormRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(SaveFormRequest $request)
@@ -144,7 +144,7 @@ class FormController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  jazmy\FormBuilder\Requests\SaveFormRequest $request
+     * @param  huckinb\FormBuilder\Requests\SaveFormRequest $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

@@ -1,6 +1,6 @@
 <?php
 /*--------------------
-https://github.com/jazmy/laravelformbuilder
+https://github.com/huckinb/laravelformbuilder
 Licensed under the GNU General Public License v3.0
 Author: Jasmine Robinson (jazmy.com)
 Last Updated: 12/29/2018
@@ -30,7 +30,7 @@ return [
     /**
      * The class that will provide the roles we will display on form create or edit pages?
      */
-    'roles_provider' => jazmy\FormBuilder\Services\RolesProvider::class,
+    'roles_provider' => huckinb\FormBuilder\Services\RolesProvider::class,
 
     /**
      * Models used in form builder
