@@ -62,7 +62,7 @@ class RenderFormController extends Controller
             foreach ($uploadedFiles as $key => $file) {
                 // store the file and set it's path to the value of the key holding it
                 if ($file->isValid()) {
-                    $input[$key] = $file->store('fb_uploads', 'public');
+                    $input[$key] = $file->storePubliclyAs('public/form_uploads/'.$user->id, $file->getFilename() .'.'. $file->getClientOriginalExtension());
                 }
             }
 
