@@ -26,6 +26,7 @@ class CreateFormsTable extends Migration
             $table->string('name');
             $table->string('icon');
             $table->string('visibility');
+            $table->unsignedBigInteger('permission_id')->nullable();
             $table->boolean('allows_edit')->default(false);
 
             $table->string('identifier')->unique();
