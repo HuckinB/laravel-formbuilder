@@ -28,6 +28,9 @@ class CreateFormSubmissionsTable extends Migration
             $table->unsignedBigInteger('status');
 
             $table->text('content');
+			
+			$table->unsignedBigInteger('claimed_id')->nullable();
+            $table->text('response')->nullable();
 
             $table->timestamps();
 
