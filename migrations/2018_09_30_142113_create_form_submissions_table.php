@@ -25,7 +25,7 @@ class CreateFormSubmissionsTable extends Migration
 
             $table->unsignedBigInteger('user_id')->nullable();
 			
-            $table->unsignedBigInteger('status');
+            $table->unsignedBigInteger('status')->default('1');
 
             $table->text('content');
 			
