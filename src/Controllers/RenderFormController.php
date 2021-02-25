@@ -12,6 +12,7 @@ use huckinb\FormBuilder\Helper;
 use huckinb\FormBuilder\Models\Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\Application\ReceivedNotification;
 use Throwable;
 
 class RenderFormController extends Controller
@@ -68,12 +69,14 @@ class RenderFormController extends Controller
 
             $user_id = auth()->user()->id ?? null;
 
-            $form->submissions()->create([
+            $inserted = $form->submissions()->create([
                 'user_id' => $user_id,
                 'content' => $input,
             ]);
 
             DB::commit();
+
+            auth()->user()->notify(new ReceivedNotification($inserted));
 
             return redirect()
                     ->route('formbuilder::form.feedback', $identifier)
