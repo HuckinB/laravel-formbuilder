@@ -188,4 +188,9 @@ class Submission extends Model
 
         return new HtmlString($str);
     }
+
+    public function claimer()
+    {
+        return $this->belongsTo(config('formbuilder.models.user'), 'claimed_id');
+    }
 }
