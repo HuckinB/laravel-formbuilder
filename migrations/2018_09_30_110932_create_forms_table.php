@@ -21,21 +21,22 @@ class CreateFormsTable extends Migration
         Schema::create('forms', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
 
             $table->string('name');
             $table->string('icon');
+            $table->boolean('open');
             $table->string('visibility');
-            $table->unsignedBigInteger('permission_id')->nullable();
+            $table->foreignId('permission_id')->nullable()->constrained();
             $table->boolean('allows_edit')->default(false);
 
             $table->string('identifier')->unique();
             $table->text('form_builder_json')->nullable();
 
+            $table->date('closing_date');
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });
     }
 
