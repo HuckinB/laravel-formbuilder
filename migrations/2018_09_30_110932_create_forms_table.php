@@ -31,7 +31,7 @@ class CreateFormsTable extends Migration
             $table->boolean('allows_edit')->default(false);
 
             $table->string('identifier')->unique();
-            $table->text('form_builder_json')->nullable();
+            $table->longText('form_builder_json')->nullable();
 
             $table->date('closing_date');
             $table->softDeletes();
